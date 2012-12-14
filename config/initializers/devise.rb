@@ -1,7 +1,6 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.cas_base_url = "https://localhost:8000/"
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
@@ -83,7 +82,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "0aadd1ae54cad4f0a5592e13a28760a3f75588df351df0d5dad66e4558e81d1d836604f5a1fa51129a9f630e23ccb44907ce2316818a72983ba8326b5309abd0"
+  # config.pepper = "1bc608b76114575905cd1423c2074dbd18e30257c978e0b07dd8fbb37772ba5fd02380decaab88cc26216b3226b7adcab505473323d880da65a1165d98e778ff"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
