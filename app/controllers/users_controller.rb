@@ -81,4 +81,19 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def follow
+    @user = User.find(params[:id])
+    current_user.follow(@user)
+    respond_to do |format|
+      format.js {render :action=>"follow.js"}
+  end
+  end
+
+  def unfollow
+    @user = User.find(params[:id])
+    current_user.stop_following(@user)
+    respond_to do |format|
+      format.js {render :action=>"unfollow.js"}
+  end
+end
 end

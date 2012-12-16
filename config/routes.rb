@@ -26,7 +26,7 @@ Followable::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+  resources :follows
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
@@ -41,7 +41,10 @@ Followable::Application.routes.draw do
   #     end
   #   end
 resources :users do
-  resources :follows
+    member do
+    get :follow
+    get :unfollow
+end
 end
   # Sample resource route within a namespace:
   #   namespace :admin do
