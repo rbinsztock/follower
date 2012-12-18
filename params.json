@@ -1,1 +1,1 @@
-{"note":"Don't delete this file! It's used internally to help with page regeneration.","name":"Follower","body":"Using of Acts_as_follower in Rails 3 Ruby 1.9.3","tagline":"Follower","google":""}
+{"note":"Don't delete this file! It's used internally to help with page regeneration.","name":"Follower","tagline":"Follower","body":"Exemple Application To use Acts_as_Follower into Rails 3 and Ruby 1.9.3.\r\n\r\n- install RoR (RVM)\r\n- clone the project : git clone url\r\n- rake db:seed to populate your base, look into the seed.rb for user and password.\r\n","google":""}
