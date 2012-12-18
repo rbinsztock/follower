@@ -5,7 +5,7 @@
    'Un-Follow'
  <% end %>
   <% else %>
-    <%= link_to(follow_user_path(@user) ,:remote => true, :class => 'btn btn-primary') do %>
+    <%= link_to(follow_user_path(user) ,:remote => true, :class => 'btn btn-primary') do %>
     <i class="icon-ok icon-white"></i>
     'Follow'
     <%end%>

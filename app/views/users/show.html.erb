@@ -26,7 +26,7 @@
               :class => 'btn btn-danger' %>
 </div>
 <% if user_signed_in? %>
-  <div id="follow_user">
+  <div id="follow_user<%=@user.id%>">
     <%= render :partial => "follow_user", :locals => {:user => @user} %>
   </div>
 <% end %>

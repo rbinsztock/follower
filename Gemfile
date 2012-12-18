@@ -8,7 +8,6 @@ gem 'rails', '3.2.9'
 gem 'sqlite3'
 gem "acts_as_follower"
 gem 'devise'
-gem 'devise_cas_authenticatable'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 

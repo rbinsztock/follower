@@ -23,7 +23,21 @@
         <td><%= user.email %></td>
         <td><%= user.prenom %></td>
         <td><%=l user.created_at %></td>
-        <td>
+        <td><div id="follow_user<%=user.id%>">
+          <% unless user == current_user %>
+  <% if current_user.following?(user) %>
+    <%= link_to(unfollow_user_path(user), :remote => true, :class => 'btn btn-primary') do %>
+   <i class="icon-remove icon-white"></i>
+   'Un-Follow'
+ <% end %>
+  <% else %>
+    <%= link_to(follow_user_path(user) ,:remote => true, :class => 'btn btn-primary') do %>
+    <i class="icon-ok icon-white"></i>
+    'Follow'
+    <%end%>
+  <% end %>
+<% end %>
+</div>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_user_path(user), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
